@@ -4,7 +4,7 @@ _start:
 /*set the cpu to svc32 mode*/
 	mrs r0,cpsr
 	bic r0,r0,#0x1f
-	orr r0,r0,#0xd3
+	orr r0,r0,#0xd3  /*I=1 disable IRQ F=1 disable FIQ T=0 arm state */
 	msr cpsr,r0
 
 /*disable_mmu*/

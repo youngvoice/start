@@ -1,4 +1,4 @@
-all: start.o nand.o main.o
+all: start.o nand.o main.o uart.o led.o
 	arm-linux-ld -Tlink.lds -o start.elf $^
 	arm-linux-objcopy -O binary start.elf start.bin
 	
